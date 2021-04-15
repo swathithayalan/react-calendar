@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from 'react';
+import CalendarPage from './Calendar';
+import DragAndDropCalendarPage from './DragAndDropCalendar';
 
+//references:
+//http://jquense.github.io/react-big-calendar/examples/index.html
+//https://stackoverflow.com/questions/64295252/react-big-calendar-has-no-default-export
+//exapmples: https://codesandbox.io/examples/package/react-big-calendar
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h4>Calendar with events</h4>
+      <CalendarPage></CalendarPage>
+      <h4>Calendar with Drag and Drop Options</h4>
+      <DragAndDropCalendarPage></DragAndDropCalendarPage>
+      </Fragment>
   );
 }
 
